@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringo XP Freestyle Panel FF</title>
+    <style>
+        :root {
+            --bg-color: #0b0b0f;
+            --surface-color: #1a1a24;
+            --accent-red: #ff2a44;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0b0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 11, 15, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-red);
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Sections */
+        .page-section {
+            display: none; /* Hidden by default, JS handles visibility */
+            padding: 120px 5% 60px;
+            max-width: 900px;
+            margin: 0 auto;
+            min-height: 85vh;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+            color: var(--accent-red);
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        /* Hero / Home Specific */
+        .hero-container {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .app-icon-placeholder {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #1a1a24, #2a0808);
+            border: 2px solid var(--accent-red);
+            border-radius: 25px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--accent-red);
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 42, 68, 0.3);
+        }
+
+        /* Form styling for support */
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: var(--surface-color);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        footer a {
+            color: var(--accent-red);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home" class="logo">GRINGO <span>XP</span></a>
+        <div class="nav-links">
+            <a href="#support">Support</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="page-section">
+        <div class="hero-container">
+            <div class="app-icon-placeholder">💀</div>
+            <h1>Next-Level Utility Panel</h1>
+            <p>Customize your gaming setup, optimize sensitivity, and monitor device performance in real-time with Gringo XP Freestyle Panel FF.</p>
+            <a href="#" class="download-btn">Download on the App Store</a>
+            <p style="margin-top: 40px; font-size: 0.8rem;">
+                Disclaimer: Gringo XP Freestyle Panel FF is an independent utility application. It is not affiliated with, endorsed by, sponsored by, or associated with Garena, Free Fire, Free Fire MAX, or any of their respective owners.
+            </p>
+        </div>
+    </section>
+
+    <!-- SUPPORT SECTION -->
+    <section id="support" class="page-section">
+        <h1>Support & Contact</h1>
+        <p>Need help with your configurations or encountering an issue? Reach out to us directly.</p>
+        
+        <div style="background: var(--surface-color); padding: 30px; border-radius: 12px; margin-top: 30px;">
+            <h2>Send a Message</h2>
+            <form action="mailto:yboughaba354@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+                <button type="submit" class="download-btn" style="border:none; cursor:pointer;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PRIVACY POLICY SECTION -->
+    <section id="privacy" class="page-section">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: 25 September 2026</p>
+        
+        <h2>1. Information Collection</h2>
+        <p>Gringo XP Freestyle Panel FF is designed to operate locally on your device. We do not require account creation, and your crosshair or sensitivity settings are stored locally. We do not harvest, store, or transmit your personal gameplay data to our servers.</p>
+
+        <h2>2. Third-Party Advertising (AdMob & AdSense)</h2>
+        <p>We use Google AdMob and Google AdSense to display advertisements to keep this application free. Third-party vendors, including Google, use cookies and device identifiers (such as App Tracking Transparency permissions) to serve personalized ads based on your prior visits to our application or other websites. You can opt out of personalized advertising by visiting your iOS device settings or Google's Ad Settings.</p>
+
+        <h2>3. Local Storage</h2>
+        <p>Your custom presets, sensitivity values, and active setups are saved locally using Apple's standard sandbox storage methods. If you delete the app, this local data is erased.</p>
+    </section>
+
+    <!-- TERMS OF USE SECTION -->
+    <section id="terms" class="page-section">
+        <h1>Terms of Use</h1>
+        <p>Last updated: 25 September 2026</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By downloading or using Gringo XP Freestyle Panel FF, these terms will automatically apply to you. You should make sure that you read them carefully before using the app.</p>
+
+        <h2>2. Permitted Use</h2>
+        <p>This application is provided as an on-screen reference and configuration calculator. You agree not to reverse-engineer, modify, or attempt to extract the source code of the app.</p>
+
+        <h2>3. Disclaimer of Affiliation</h2>
+        <p>This is a third-party utility tool. It is completely independent and does not modify, inject code into, or interact with the memory of any active mobile games. All trademarks and copyrights belong to their respective owners.</p>
+
+        <h2>4. Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of Morocco, without regard to its conflict of law provisions.</p>
+    </section>
+
+    <footer>
+        &copy; 2026 Youssef BOUGHABA. All rights reserved.<br>
+        Contact: <a href="mailto:yboughaba354@gmail.com">yboughaba354@gmail.com</a>
+    </footer>
+
+    <!-- Hashtag Routing Script -->
+    <script>
+        function routePage() {
+            // Get the hash from URL, default to #home
+            let hash = window.location.hash || '#home';
+            
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show the target section
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+                window.scrollTo(0, 0);
+            } else {
+                document.querySelector('#home').style.display = 'block';
+            }
+        }
+
+        // Listen for URL hash changes
+        window.addEventListener('hashchange', routePage);
+        
+        // Run on initial load
+        window.addEventListener('load', routePage);
+    </script>
+</body>
+</html>
